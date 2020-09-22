@@ -1,5 +1,7 @@
 let { getUsuarioSync } = require('./app')
 
+let startTime = new Date().getTime();
+
 console.log('Inicia');
 
 let usuario = getUsuarioSync(1);
@@ -18,3 +20,7 @@ let usuario4 = getUsuarioSync(5);
 console.log(usuario4);
 
 console.log('Fin');
+
+let finishedTime = new Date().getTime();
+let elapsedTime =(finishedTime - startTime)/1000;
+console.log('Tiempo total de ejecucion: ' + elapsedTime + ' segundos.');
